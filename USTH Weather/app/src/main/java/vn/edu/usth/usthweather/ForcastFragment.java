@@ -3,6 +3,7 @@ package vn.edu.usth.usthweather;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -27,14 +28,12 @@ public class ForcastFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-       // View view = inflater.inflate(R.layout.fragment_forcast, container, false);
 
         LinearLayout linearLayout = new LinearLayout(getContext());
         linearLayout.setBackgroundColor(Color.parseColor("#32a852"));
         linearLayout.setOrientation(LinearLayout.VERTICAL);
-
 
         TextView day = new TextView(getContext());
         day.setText(R.string.thursday);
