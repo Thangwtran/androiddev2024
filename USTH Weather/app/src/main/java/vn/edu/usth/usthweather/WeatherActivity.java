@@ -26,6 +26,8 @@ public class WeatherActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.fragmentContainerView,ForcastFragment.class,null)
                 .commit();
+
+
     }
 
     @Override
