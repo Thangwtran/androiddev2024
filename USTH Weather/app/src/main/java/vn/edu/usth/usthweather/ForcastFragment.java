@@ -30,23 +30,6 @@ public class ForcastFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        LinearLayout linearLayout = new LinearLayout(getContext());
-        linearLayout.setBackgroundColor(Color.parseColor("#32a852"));
-        linearLayout.setOrientation(LinearLayout.VERTICAL);
-
-        TextView day = new TextView(getContext());
-        day.setText(R.string.thursday);
-        day.setTextSize(50);
-        day.setGravity(View.TEXT_ALIGNMENT_GRAVITY);
-        day.setTextColor(Color.parseColor("#000000"));
-
-        ImageView imageView = new ImageView(getContext());
-        imageView.setImageResource(R.drawable.ic_weather);
-        imageView.setPadding(16,16,16,16);
-
-        linearLayout.addView(day);
-        linearLayout.addView(imageView);
-        return linearLayout;
+        return inflater.inflate(R.layout.fragment_forcast,container,false);
     }
 }
