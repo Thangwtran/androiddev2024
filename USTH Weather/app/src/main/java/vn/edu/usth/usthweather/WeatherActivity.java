@@ -24,10 +24,8 @@ public class WeatherActivity extends AppCompatActivity {
         });
         Log.i(TAG, "ON_CREATE");
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.fragmentContainerView,ForcastFragment.class,null)
+                .add(R.id.fragmentContainerView, ForcastFragment.class, null)
                 .commit();
-
-
     }
 
     @Override
