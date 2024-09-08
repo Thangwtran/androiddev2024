@@ -9,10 +9,11 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/text_city"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:text="HaNoi"
+        android:text="Tokyo"
         android:textColor="@color/text"
         android:textSize="20sp" />
 
@@ -20,7 +21,7 @@
         android:id="@+id/text_forcast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/cloudy"
+        android:text="@string/storm"
         android:textColor="@color/text"
         android:textSize="24sp" />
 
@@ -29,7 +30,7 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/weather"
-        app:tint="#01579B" />
+        android:src="@drawable/tornado"
+        app:tint="#006064" />
 
 </RelativeLayout>

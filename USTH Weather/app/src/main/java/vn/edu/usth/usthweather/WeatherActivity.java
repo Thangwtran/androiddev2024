@@ -8,10 +8,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
 
 public class WeatherActivity extends AppCompatActivity {
     public static final String TAG = "Weather";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +25,11 @@ public class WeatherActivity extends AppCompatActivity {
             return insets;
         });
         Log.i(TAG, "ON_CREATE");
-        getSupportFragmentManager().beginTransaction()
-                .add(R.id.fragmentContainerView, ForcastFragment.class, null)
-                .commit();
+        ViewPager pager = findViewById(R.id.pager);
+        HomeFragmentPagerAdapter adapter = new HomeFragmentPagerAdapter(getSupportFragmentManager());
+        pager.setAdapter(adapter);
+        TabLayout tablayout = findViewById(R.id.tab_layout);
+        tablayout.setupWithViewPager(pager);
     }
 
     @Override
