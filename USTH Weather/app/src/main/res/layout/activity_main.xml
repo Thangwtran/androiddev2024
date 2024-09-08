@@ -14,12 +14,9 @@
         tools:ignore="SpeakableTextPresentCheck"
         tools:layout_editor_absoluteX="1dp" />
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/pager"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="SpeakableTextPresentCheck"
-        tools:layout_editor_absoluteY="731dp" />
-
+        android:layout_height="match_parent" />
 
 </LinearLayout>

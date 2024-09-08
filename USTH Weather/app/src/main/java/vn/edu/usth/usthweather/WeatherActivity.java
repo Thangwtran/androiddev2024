@@ -9,11 +9,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 public class WeatherActivity extends AppCompatActivity {
     public static final String TAG = "Weather";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +28,21 @@ public class WeatherActivity extends AppCompatActivity {
             return insets;
         });
         Log.i(TAG, "ON_CREATE");
-        ViewPager pager = findViewById(R.id.pager);
-        HomeFragmentPagerAdapter adapter = new HomeFragmentPagerAdapter(getSupportFragmentManager());
+        initViewPager();
+    }
+
+    private void initViewPager() {
+        ViewPager2 pager = findViewById(R.id.pager2);
+        //HomeFragmentPagerAdapter adapter = new HomeFragmentPagerAdapter(getSupportFragmentManager(), getLifecycle());
+        HomeFragmentPagerAdapter adapter = new HomeFragmentPagerAdapter(this);
         pager.setAdapter(adapter);
         TabLayout tablayout = findViewById(R.id.tab_layout);
-        tablayout.setupWithViewPager(pager);
+        String[] titles = new String[]{"Hanoi, Vietnam", "Paris, France", "Tokyo, Japan"};
+        TabLayoutMediator layoutMediator = new TabLayoutMediator(tablayout, pager,
+                ((tab, position) -> {
+                    tab.setText(titles[position]);
+                }));
+        layoutMediator.attach();
     }
 
     @Override
