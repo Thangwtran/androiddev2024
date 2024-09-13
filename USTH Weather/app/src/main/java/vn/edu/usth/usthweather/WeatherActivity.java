@@ -37,7 +37,7 @@ public class WeatherActivity extends AppCompatActivity {
         HomeFragmentPagerAdapter adapter = new HomeFragmentPagerAdapter(this);
         pager.setAdapter(adapter);
         TabLayout tablayout = findViewById(R.id.tab_layout);
-        String[] titles = new String[]{"Hanoi, Vietnam", "Paris, France", "Tokyo, Japan"};
+        String[] titles = new String[]{"Hà Nội, Việt Nam", "Paris, Pháp", "Tokyo, Nhật Bản"};
         TabLayoutMediator layoutMediator = new TabLayoutMediator(tablayout, pager,
                 ((tab, position) -> {
                     tab.setText(titles[position]);

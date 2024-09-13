@@ -7,9 +7,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import vn.edu.usth.usthweather.weather.WeatherAndForecastFragment;
-import vn.edu.usth.usthweather.weather.WeatherAndForecastFragment1;
-import vn.edu.usth.usthweather.weather.WeatherAndForecastFragment2;
+import vn.edu.usth.usthweather.weather_forcast_fragment.WeatherAndForecastFragment;
+import vn.edu.usth.usthweather.weather_forcast_fragment.WeatherAndForecastFragment1;
+import vn.edu.usth.usthweather.weather_forcast_fragment.WeatherAndForecastFragment2;
 
 public class HomeFragmentPagerAdapter extends FragmentStateAdapter {
 
