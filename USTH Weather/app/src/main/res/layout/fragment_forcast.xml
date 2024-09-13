@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:orientation="horizontal"
-        android:paddingBottom="30dp"
+        android:paddingBottom="@dimen/padding_bottom_30"
         tools:ignore="UselessParent">
 
         <TextView
@@ -51,7 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="30dp"
+        android:paddingBottom="@dimen/padding_bottom_30"
         tools:ignore="UselessParent">
 
         <TextView
@@ -60,7 +60,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Tue"
+            android:text="@string/tue"
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -70,7 +70,7 @@
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="48dp"
+            android:layout_marginEnd="@dimen/margin_end_48"
             android:layout_weight="1"
             android:contentDescription="@string/icon_weather"
             android:src="@drawable/rain"
@@ -91,7 +91,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="30dp"
+        android:paddingBottom="@dimen/padding_bottom_30"
         tools:ignore="UselessParent">
 
         <TextView
@@ -100,7 +100,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Wed"
+            android:text="@string/wed"
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -109,7 +109,7 @@
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="48dp"
+            android:layout_marginEnd="@dimen/margin_end_48"
             android:layout_weight="1"
             android:contentDescription="@string/icon_weather"
             android:src="@drawable/snow"
@@ -130,7 +130,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="30dp"
+        android:paddingBottom="@dimen/padding_bottom_30"
         tools:ignore="UselessParent">
 
         <TextView
@@ -139,7 +139,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Thu"
+            android:text="@string/thu"
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -148,7 +148,7 @@
             android:id="@+id/imageView4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="48dp"
+            android:layout_marginEnd="@dimen/margin_end_48"
             android:layout_weight="1"
             android:contentDescription="@string/icon_weather"
             android:src="@drawable/tornado"
@@ -169,7 +169,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="30dp"
+        android:paddingBottom="@dimen/padding_bottom_30"
         tools:ignore="UselessParent">
 
         <TextView
@@ -178,7 +178,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Fri"
+            android:text="@string/fri"
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -187,7 +187,7 @@
             android:id="@+id/imageView5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="48dp"
+            android:layout_marginEnd="@dimen/margin_end_48"
             android:layout_weight="1"
             android:contentDescription="@string/icon_weather"
             android:src="@drawable/weather"
@@ -209,7 +209,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="30dp"
+        android:paddingBottom="@dimen/padding_bottom_30"
         tools:ignore="UselessParent">
 
         <TextView
@@ -218,7 +218,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Sat"
+            android:text="@string/sat"
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -227,7 +227,7 @@
             android:id="@+id/imageView6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="48dp"
+            android:layout_marginEnd="@dimen/margin_end_48"
             android:layout_weight="1"
             android:contentDescription="@string/icon_weather"
             android:src="@drawable/snow"
@@ -248,7 +248,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="30dp"
+        android:paddingBottom="@dimen/padding_bottom_30"
         tools:ignore="UselessParent">
 
         <TextView
@@ -257,7 +257,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Sun"
+            android:text="@string/sun"
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -266,7 +266,7 @@
             android:id="@+id/imageView7"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="48dp"
+            android:layout_marginEnd="@dimen/margin_end_48"
             android:layout_weight="1"
             android:contentDescription="@string/icon_weather"
             android:src="@drawable/moon"
@@ -287,7 +287,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="30dp"
+        android:paddingBottom="@dimen/padding_bottom_30"
         tools:ignore="UselessParent">
 
         <TextView
@@ -305,7 +305,7 @@
             android:id="@+id/imageView8"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="48dp"
+            android:layout_marginEnd="@dimen/margin_end_48"
             android:layout_weight="1"
             android:contentDescription="@string/icon_weather"
             android:src="@drawable/tornado"
@@ -326,7 +326,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="30dp"
+        android:paddingBottom="@dimen/padding_bottom_30"
         tools:ignore="UselessParent">
 
         <TextView
@@ -335,7 +335,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Tue"
+            android:text="@string/tue"
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -344,7 +344,7 @@
             android:id="@+id/imageView9"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="48dp"
+            android:layout_marginEnd="@dimen/margin_end_48"
             android:layout_weight="1"
             android:contentDescription="@string/icon_weather"
             android:src="@drawable/tornado"
@@ -360,44 +360,4 @@
             android:textSize="16sp"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="64dp"
-        tools:ignore="UselessParent">
-
-        <TextView
-            android:id="@+id/textView18"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Wed"
-            android:textColor="#3A3939"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="48dp"
-            android:layout_weight="1"
-            android:contentDescription="@string/icon_weather"
-            android:src="@drawable/tornado"
-            app:tint="#c90e0e" />
-
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/storm"
-            android:textColor="#3A3939"
-            android:textSize="16sp"
-            tools:ignore="RtlSymmetry" />
-    </LinearLayout>
-
 </LinearLayout>

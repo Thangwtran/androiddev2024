@@ -9,4 +9,7 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="tint_color_image_frag_weather">#01579B</color>
+    <color name="fragment_weather_background">#80CBC4</color>
+    <color name="tint_color_image_frag_weather_1">#E65100</color>
 </resources>

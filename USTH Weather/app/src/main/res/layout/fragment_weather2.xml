@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#80CBC4"
+    android:background="@color/fragment_weather_background"
     android:layout_height="match_parent"
     tools:context=".weather_fragment.WeatherFragment">
 
@@ -12,10 +12,11 @@
         android:id="@+id/text_city"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:text="Tokyo"
+        android:layout_alignParentEnd="true"
+        android:text="@string/tokyo"
         android:textColor="@color/text"
-        android:textSize="20sp" />
+        android:textSize="@dimen/text_size_20"
+        tools:ignore="RelativeOverlap" />
 
     <TextView
         android:id="@+id/text_forcast"
@@ -23,13 +24,14 @@
         android:layout_height="wrap_content"
         android:text="@string/storm"
         android:textColor="@color/text"
-        android:textSize="24sp" />
+        android:textSize="@dimen/text_size_24" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerInParent="true"
+        android:contentDescription="@string/image_weather"
         android:src="@drawable/tornado"
         app:tint="#006064" />
 
