@@ -1,5 +1,6 @@
 package vn.edu.usth.usthweather;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -17,6 +18,8 @@ import com.google.android.material.tabs.TabLayoutMediator;
 public class WeatherActivity extends AppCompatActivity {
     public static final String TAG = "Weather";
 
+    private MediaPlayer mMediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +32,8 @@ public class WeatherActivity extends AppCompatActivity {
         });
         Log.i(TAG, "ON_CREATE");
         initViewPager();
+        mMediaPlayer = MediaPlayer.create(this,R.raw.cardigan);
+        mMediaPlayer.start();
     }
 
     private void initViewPager() {
