@@ -1,7 +1,10 @@
 package vn.edu.usth.usthweather.activity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -42,31 +45,55 @@ public class WeatherActivity extends AppCompatActivity {
         });
         Log.i(TAG, "ON_CREATE");
         initViewPager();
-        mMediaPlayer = MediaPlayer.create(this,R.raw.cardigan);
+        mMediaPlayer = MediaPlayer.create(this, R.raw.cardigan);
         mMediaPlayer.start();
         initToolBar();
-        requestNetwork();
+        //requestNetwork();
+        requestNetworkByAsyncTask();
+    }
+
+    private void requestNetworkByAsyncTask() {
+        @SuppressLint("StaticFieldLeak")
+        AsyncTask<String, Integer, Bitmap> task = new AsyncTask<String, Integer, Bitmap>() {
+
+            @Override
+            protected Bitmap doInBackground(String... strings) {
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                Toast.makeText(getApplicationContext(),
+                        "Request Network....", Toast.LENGTH_SHORT).show();
+            }
+        };
+        task.execute();
     }
 
     private void requestNetwork() {
-        final Handler handler = new Handler(Looper.getMainLooper()){
+        final Handler handler = new Handler(Looper.getMainLooper()) {
             @Override
             public void handleMessage(@NonNull Message msg) {
                 String content = msg.getData().getString(NETWORK_RESPONSE_KEY);
-                Toast.makeText(getApplicationContext(),content,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), content, Toast.LENGTH_SHORT).show();
             }
         };
 
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                try{
+                try {
                     Thread.sleep(5000);
-                }catch (InterruptedException e){
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 Bundle mBundle = new Bundle();
-                mBundle.putString(NETWORK_RESPONSE_KEY,"Request Network....");
+                mBundle.putString(NETWORK_RESPONSE_KEY, "Request Network....");
                 Message msg = new Message();
                 msg.setData(mBundle);
                 handler.sendMessage(msg);
@@ -80,16 +107,16 @@ public class WeatherActivity extends AppCompatActivity {
         toolbar.inflateMenu(R.menu.weather_menu);
         toolbar.setTitle(R.string.app_name);
         toolbar.setOnMenuItemClickListener(item -> {
-            int itemMenuId =item.getItemId();
-            if(itemMenuId == R.id.ic_refresh){
-                Toast.makeText(this,"Refreshing process...",Toast.LENGTH_SHORT).show();
+            int itemMenuId = item.getItemId();
+            if (itemMenuId == R.id.ic_refresh) {
+                Toast.makeText(this, "Refreshing process...", Toast.LENGTH_SHORT).show();
                 return true;
             } else if (itemMenuId == R.id.ic_more) {
-                Intent intent = new Intent(this,PrefActivity.class);
+                Intent intent = new Intent(this, PrefActivity.class);
                 startActivity(intent);
                 return true;
-            }else{
-                Toast.makeText(this,"Not found menu item",Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Not found menu item", Toast.LENGTH_SHORT).show();
                 return false;
             }
         });
