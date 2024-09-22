@@ -14,7 +14,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView4"
-        android:name="vn.edu.usth.usthweather.ForcastFragment"
+        android:name="vn.edu.usth.usthweather.fragment.ForcastFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/margin_start_16"
@@ -28,7 +28,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView5"
-        android:name="vn.edu.usth.usthweather.weather_fragment.WeatherFragmentParis"
+        android:name="vn.edu.usth.usthweather.fragment.weather_fragment.WeatherFragmentParis"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/margin_start_16"

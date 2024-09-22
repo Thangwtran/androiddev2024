@@ -1,4 +1,4 @@
-package vn.edu.usth.usthweather.weather_fragment;
+package vn.edu.usth.usthweather.fragment.weather_fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

@@ -1,4 +1,4 @@
-package vn.edu.usth.usthweather;
+package vn.edu.usth.usthweather.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -7,9 +7,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import vn.edu.usth.usthweather.weather_forcast_fragment.WeatherAndForecastFragmentHaNoi;
-import vn.edu.usth.usthweather.weather_forcast_fragment.WeatherAndForecastFragmentParis;
-import vn.edu.usth.usthweather.weather_forcast_fragment.WeatherAndForecastFragmentTokyo;
+import vn.edu.usth.usthweather.fragment.weather_forcast_fragment.WeatherAndForecastFragmentHaNoi;
+import vn.edu.usth.usthweather.fragment.weather_forcast_fragment.WeatherAndForecastFragmentParis;
+import vn.edu.usth.usthweather.fragment.weather_forcast_fragment.WeatherAndForecastFragmentTokyo;
 
 public class HomeFragmentPagerAdapter extends FragmentStateAdapter {
 

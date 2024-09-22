@@ -1,4 +1,4 @@
-package vn.edu.usth.usthweather.weather_forcast_fragment;
+package vn.edu.usth.usthweather.fragment.weather_forcast_fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,14 +11,14 @@ import androidx.fragment.app.Fragment;
 
 import vn.edu.usth.usthweather.R;
 
-public class WeatherAndForecastFragmentParis extends Fragment {
+public class WeatherAndForecastFragmentTokyo extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_weather_and_forcast1, container, false);
+        return inflater.inflate(R.layout.fragment_weather_and_forcast2, container, false);
     }
 
     @Override

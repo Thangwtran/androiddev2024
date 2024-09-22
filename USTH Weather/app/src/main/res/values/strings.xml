@@ -10,7 +10,7 @@
     <string name="rain">Có mưa\n26C - 27C</string>
     <string name="moon">Trăng sáng\n26C - 29C</string>
 
-<!-- Days String -->
+    <!-- Days String -->
     <string name="tue">Thứ ba</string>
     <string name="wed">Thứ tư</string>
     <string name="thu">Thứ năm</string>
