@@ -6,10 +6,10 @@ import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
@@ -34,6 +34,14 @@ public class WeatherActivity extends AppCompatActivity {
         initViewPager();
         mMediaPlayer = MediaPlayer.create(this,R.raw.cardigan);
         mMediaPlayer.start();
+
+        initToolBar();
+    }
+
+    private void initToolBar() {
+        Toolbar toolbar = findViewById(R.id.weather_toolbar);
+        toolbar.inflateMenu(R.menu.weather_menu);
+        toolbar.setTitle(R.string.app_name);
     }
 
     private void initViewPager() {

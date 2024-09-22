@@ -1,23 +1,22 @@
 package vn.edu.usth.usthweather.weather_fragment;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import vn.edu.usth.usthweather.R;
 
 
-public class WeatherFragment extends Fragment {
+public class WeatherFragmentParis extends Fragment {
     public static final String BUNDLE_KEY = "BUNDLE_KEY";
 
 
-    public WeatherFragment() {
+    public WeatherFragmentParis() {
     }
 
 
@@ -25,7 +24,7 @@ public class WeatherFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_weather, container, false);
+        return inflater.inflate(R.layout.fragment_weather1, container, false);
     }
 
     @Override

@@ -22,5 +22,7 @@
     <string name="image_weather">Image weather</string>
     <string name="paris">Paris</string>
     <string name="tokyo">Tokyo</string>
+    <string name="refresh">Refresh</string>
+    <string name="more">More</string>
 
 </resources>

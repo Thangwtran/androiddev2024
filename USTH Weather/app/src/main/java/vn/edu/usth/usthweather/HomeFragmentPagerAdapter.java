@@ -7,9 +7,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import vn.edu.usth.usthweather.weather_forcast_fragment.WeatherAndForecastFragment;
-import vn.edu.usth.usthweather.weather_forcast_fragment.WeatherAndForecastFragment1;
-import vn.edu.usth.usthweather.weather_forcast_fragment.WeatherAndForecastFragment2;
+import vn.edu.usth.usthweather.weather_forcast_fragment.WeatherAndForecastFragmentHaNoi;
+import vn.edu.usth.usthweather.weather_forcast_fragment.WeatherAndForecastFragmentParis;
+import vn.edu.usth.usthweather.weather_forcast_fragment.WeatherAndForecastFragmentTokyo;
 
 public class HomeFragmentPagerAdapter extends FragmentStateAdapter {
 
@@ -25,9 +25,9 @@ public class HomeFragmentPagerAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
         switch (position){
-            case 0 : return new WeatherAndForecastFragment();
-            case 1 : return new WeatherAndForecastFragment1();
-            case 2 : return new WeatherAndForecastFragment2();
+            case 0 : return new WeatherAndForecastFragmentHaNoi();
+            case 1 : return new WeatherAndForecastFragmentParis();
+            case 2 : return new WeatherAndForecastFragmentTokyo();
         }
         return new Fragment();
     }

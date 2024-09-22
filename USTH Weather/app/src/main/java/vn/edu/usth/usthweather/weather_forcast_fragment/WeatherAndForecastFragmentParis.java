@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import vn.edu.usth.usthweather.R;
 
-public class WeatherAndForecastFragment1 extends Fragment {
+public class WeatherAndForecastFragmentParis extends Fragment {
 
     @Nullable
     @Override

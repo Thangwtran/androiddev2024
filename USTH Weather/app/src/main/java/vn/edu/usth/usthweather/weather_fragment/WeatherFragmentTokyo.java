@@ -12,11 +12,11 @@ import androidx.fragment.app.Fragment;
 import vn.edu.usth.usthweather.R;
 
 
-public class WeatherFragment2 extends Fragment {
+public class WeatherFragmentTokyo extends Fragment {
     public static final String BUNDLE_KEY = "BUNDLE_KEY";
 
 
-    public WeatherFragment2() {
+    public WeatherFragmentTokyo() {
     }
 
 
