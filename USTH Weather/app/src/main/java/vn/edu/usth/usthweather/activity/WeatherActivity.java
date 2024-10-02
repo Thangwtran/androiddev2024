@@ -3,6 +3,7 @@ package vn.edu.usth.usthweather.activity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -23,6 +25,13 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
 
 import vn.edu.usth.usthweather.R;
 import vn.edu.usth.usthweather.adapter.HomeFragmentPagerAdapter;
@@ -60,16 +69,28 @@ public class WeatherActivity extends AppCompatActivity {
             protected Bitmap doInBackground(String... strings) {
                 try {
                     Thread.sleep(3000);
-                } catch (InterruptedException e) {
+                    URL url = new URL("https://usth.edu.vn/wp-content/uploads/2022/08/logo-165.jpg");
+                    HttpURLConnection connection =
+                            (HttpURLConnection) url.openConnection();
+                    connection.setRequestMethod("GET");
+                    connection.setDoInput(true);
+                    connection.connect();
+                    int response = connection.getResponseCode();
+                    Log.i("USTHWeather", "The response is: " + response);
+                    InputStream is = connection.getInputStream();
+                    Bitmap bitmap = BitmapFactory.decodeStream(is);
+                    connection.disconnect();
+                    return bitmap;
+                } catch (InterruptedException | IOException e) {
                     e.printStackTrace();
+                    return null;
                 }
-                return null;
             }
 
             @Override
             protected void onPostExecute(Bitmap bitmap) {
-                Toast.makeText(getApplicationContext(),
-                        "Request Network....", Toast.LENGTH_SHORT).show();
+                ImageView logo = findViewById(R.id.logo);
+                logo.setImageBitmap(bitmap);
             }
         };
         task.execute();

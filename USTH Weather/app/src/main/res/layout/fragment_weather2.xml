@@ -37,7 +37,7 @@
         android:textSize="@dimen/text_size_24" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logo"
         android:layout_width="@dimen/image_weather_size"
         android:layout_height="@dimen/image_weather_size"
         android:layout_centerInParent="true"
